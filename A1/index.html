@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+       
+        .PartTitle{
+            font-size: 28px;
+            
+        }
+        .info table,.info th,.info td{
+            border: 1px solid black;
+            font-family:sans-serif;
+        }
+        .info th{ 
+            font-style: bold ;
+            font-size: 28px ;
+            
+        }
+        .info td{
+            font-size: 20px;
+        }
+        .TableHeader{
+            height: 60px;
+            background-color:#deeaf6;
+        }
+        .TableElement{
+            height:50px
+        }
+        .TableElement > td{
+            padding: 10px;
+        }
+    
+        /* part2 */
+        .col1{
+            width: 20%;
+            /* background-color: aqua; */
+        }
+        .col1 > img{
+            width:  300px;
+            height: 300px;
+            
+        }
+        .col2{
+            width: 80%;
+            padding-left: 20px;
+            font-size: 20px;
+            /* background-color:antiquewhite; */
+        }
+        .Language{
+            width: 100%;
+            border-top: 2px  solid black;
+            padding: 10px 0px;
+           
+        }
+        .link{
+            font-size:20px;
+        }
+
+        /* part3 */
+        h3{
+            margin: 0;
+            padding: 0;
+        }
+        .p3_text{
+            margin-top: 0;
+            margin-left: 50px;
+            font-size: 18px;
+        }
+        .p3_table{
+            margin-left: 50px;
+            margin-bottom: 25px;
+        }
+        .p3_table,.p3_table tr,.p3_table td{
+        border: 1px solid black;
+        }
+        .p3_table td{
+            width: 200px;
+        }
+        .p3_table span{
+        font-size: 20px;
+        font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="PartTitle">Part 1:</h1>
+    <table class="info" border="1" width="50%">
+        <tr class="TableHeader">
+
+            <th colspan="3">CSIT128: Assignment</th>
+            <th colspan="2">Group T1G05</th>
+            
+        </tr>
+        <tr class="TableElement" >
+            <td rowspan="3" style="width:500px">Student Number / Name / Email</td>
+            <td style="width: 180px">8219035</td>
+            <td style="width: 1000px">KHANT KO KO ZAW</td>
+            <td>kkkz956@uowmail.edu.au</td>
+        </tr>
+        <tr class="TableElement">
+            
+            <td>8221947</td>
+            <td>SU THET MIN HTET</td>
+            <td>stmh046@uowmail.edu.au</td>
+        </tr >
+    </table>
+
+    <h1 class="PartTitle">Part 2: Hello World program in different languages</h1>
+    <ul>
+        <li class="link"><a href="#C++">C++</a></li>
+        <li class="link"><a href="#C#">C#</a></li>
+        <li class="link"><a href="#Python">Python</a></li>
+        <li class="link"><a href="#HTML">HTML</a></li>
+    </ul>
+
+    <table id="C++" class="Language">
+        <tr>
+            <td><h2>C++</h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="CPP-Language.png" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+#include &lt;iostream&gt;
+
+void main() {
+        count &lt;&lt; &quot;Hello World!&quot &lt;&lt; endl;
+}
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    
+
+    <table id="C#" class="Language">
+        <tr>
+            <td><h2>C#</h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="CS-Language.png" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+using System;
+
+class Program
+{
+        static void main()
+        {
+            Console.WriteLine(&quot;Hello, World!&quot;);
+        }
+}
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    <table id="Python" class="Language">
+        <tr>
+            <td><h2>Python<h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="Python-Language.jpg" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+# Hello World program in Python
+
+print(&quot;Hello World!&quot;)
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    <table id="HTML" class="Language">
+        <tr>
+            <td><h2>HTML</h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="html-Language.png" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Hello World!
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    <h1 class="PartTitle">Part 3:University policies and services</h1>
+    <h3>PLAGIARISM</h3>
+    <p class="p3_text">Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to receive zero for the entire assignment. Pagiarism has led o students being expelled from the University.<br>Please click <a target="_blank" href="https://www.uow.edu.au/student/support-services/learning-development/plagiarism/">here</a> to read more about Plagiarism</p>
+
+    <h3>ACADEMIC CONSIDERATION</h3>
+
+    <p class="p3_text">We know that life isn't perfect and there may be a time when you can't hand in an assignment on time, or make it to class or an exam. If you find yourself in a situation like this, you may be eligible for Academic COnsideration. Academic Consideration is designed to help students when they are sick, injured, or where a serious, unplanned situation has occured that has affectd their ability to study. <br>Please click <a target="_blank" href="https://www.uow.edu.au/student/admin/academic-consideration/portal/">here</a> to read more about Academic Consideration.</p>
+
+    <h3>STUDENT SUPPORT ADVISERS</h3>
+    <p class="p3_text">If you have an issue or problem that is affecting your study, then the Student Support Advisers may be abke ti help. THere are Student Support Advisers available to assist students who are studying at all UOW Campuses and in all UOW Faculities <br>Please click <a target="_blank" href="https://www.uow.edu.au/student/support-services/advisers/">here</a> to read more about Student Support Advisers. </p>
+    <p style="margin-bottom: 0;margin-left: 50px;">Student Support Adviser contact details for Faculty of Engineering and information Sciences.</p>
+    <table class="p3_table">
+        <tr>
+          <td><span>Ann-Maree Smith</span><br>Blk 40:133 , Wollongong Campus <br>(02) 4221 4714 <br>Mon-Fri <br>ams@uow.edu.au</td>
+          <td ><span>Mitz Perez</span><br>Blk 4:105 , Wollongong Campus <br>(02) 4221 3833 <br>Mon-Fri <br>mperez@uow.edu.au</td>
+         </tr>
+      </table>
+
+    <h3>DISABILITY SERVICES</h3>
+    <p class="p3_text">Disability Services provide advice and support for students with a disablity or health condition. Our aim is to ensure students with a disability realise their full academic potential. We also provide support for those who are the primary carers for those with a medical condition or disability. <br>Please click <a target="_blank" href="https://www.uow.edu.au/student/support-services/disability/">here</a> to read more about Disability Services.</p>
+    
+    <h1 class="PartTitle">Part 4</h1>
+    <form action="">
+        <table>
+            <tr>
+                <td>Name (no special letter)</td>
+                <td><input type="text" pattern="[A-Za-z0-9]+" name="username" id="username"  title="Must not contain special characters">></td>
+            </tr>
+            <tr>
+                <td>Module Code</td>
+                <td><input type="text" pattern="^[A-Z][a-z][2-9]{3}$" name="module" id="username"></td>
+            </tr>
+            <tr>
+                <td>Current Date</td>
+                <td><input type="" disabled id="Date" value=""></td>
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+                
+            </tr>
+        </table>
+
+    </form>
+    
+</body>
+<!-- <script>
+    // Get the current date
+    var now = new Date();
+
+    // Define arrays for month names and day names
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+    // Format the date string
+    var dateString = months[now.getMonth()] + ' ' + now.getDate() + ', ' 
+                    + now.getFullYear() + ' ' + days[now.getDay()] + ' '
+                    + now.toLocaleTimeString('en-US', {hour: 'numeric', 
+                                                      minute: '2-digit', 
+                                                      hour12: true});
+
+    // Set the textbox value to the formatted date
+    document.getElementById("Date").value = dateString;
+</script> -->
+
+<script>
+    // Get the current date
+    var now = new Date();
+
+    // Format the date as a string
+    var dateString = now.toLocaleDateString('en-US', { 
+        month: 'long', 
+        day: 'numeric', 
+        year: 'numeric',
+        weekday: 'short'
+    });
+    
+    // Get the current time
+    var timeString = now.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+    });
+
+    // Build the final date/time string
+    var formattedString = dateString + ' ' + timeString;
+
+    // Set the textbox value to the formatted date/time string
+    document.getElementById("Date").value = formattedString;
+</script>
+  
+</html>
