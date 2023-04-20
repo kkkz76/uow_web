@@ -231,12 +231,16 @@ Hello World!
     <h3>DISABILITY SERVICES</h3>
     <p class="p3_text">Disability Services provide advice and support for students with a disablity or health condition. Our aim is to ensure students with a disability realise their full academic potential. We also provide support for those who are the primary carers for those with a medical condition or disability. <br>Please click <a target="_blank" href="https://www.uow.edu.au/student/support-services/disability/">here</a> to read more about Disability Services.</p>
     
+
+
+
+
     <h1 class="PartTitle">Part 4</h1>
-    <form action="">
+    <form action="https://translate.google.com" id="form" method="get" onreset="gg()">
         <table>
             <tr>
-                <td>Name (no special letter)</td>
-                <td><input type="text" pattern="[A-Za-z0-9]+" name="username" id="username"  title="Must not contain special characters">></td>
+                <td>Name </td>
+                <td><input type="text" pattern="[A-Za-z0-9]+" name="username" id="username"  title="Must not contain special characters"></td>
             </tr>
             <tr>
                 <td>Module Code</td>
@@ -244,65 +248,136 @@ Hello World!
             </tr>
             <tr>
                 <td>Current Date</td>
-                <td><input type="" disabled id="Date" value=""></td>
+                <td><input type="" disabled id="Date"></td>
             </tr>
             <tr>
                 <td>Message</td>
-                <td><input type="text"></td>
+                <td><textarea name="text" id="message" cols="10" rows="4">apple</textarea></td>
+            </tr>
+            
+            <tr>
+                <td>Find</td>
+                <td><input type="text" name="find" id="find"></td>
             </tr>
             <tr>
-                <td><input type="submit"></td>
+                <td>Replace</td>
+                <td><input type="text" name="replace" disabled id="replace"></td>
+            </tr>
+            <tr>
+                <td>       
+                    <button id="change" type="button" disabled >Find and Replace</button>
+                    <td id="changeCount"></td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Source Language</p>
+                    <input id="ENG" type="radio" name="sl" value="en" checked>
+                    <label for="ENG">English</label>
+                    <br>
+                    <input id="MY" type="radio" name="sl" value="ms">
+                    <label for="MY">Malay</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="targetlanguage">Target Language</label>
+                    <select id="targetlanguage" name="tl" >
+                        <option value="zh-CN">Chinese</option>
+                        <option selected value="ms">Malay</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                    </select>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Translate"></td>
                 
             </tr>
+            <tr>
+                <td><input type="button" onclick="resetForm()" value="reset"></td>
+                
+            </tr>
+
+
         </table>
 
     </form>
     
-</body>
-<!-- <script>
-    // Get the current date
-    var now = new Date();
-
-    // Define arrays for month names and day names
-    var months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                  'July', 'August', 'September', 'October', 'November', 'December'];
-    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-    // Format the date string
-    var dateString = months[now.getMonth()] + ' ' + now.getDate() + ', ' 
-                    + now.getFullYear() + ' ' + days[now.getDay()] + ' '
-                    + now.toLocaleTimeString('en-US', {hour: 'numeric', 
-                                                      minute: '2-digit', 
-                                                      hour12: true});
-
-    // Set the textbox value to the formatted date
-    document.getElementById("Date").value = dateString;
-</script> -->
-
-<script>
-    // Get the current date
-    var now = new Date();
-
-    // Format the date as a string
-    var dateString = now.toLocaleDateString('en-US', { 
-        month: 'long', 
-        day: 'numeric', 
-        year: 'numeric',
-        weekday: 'short'
-    });
     
-    // Get the current time
-    var timeString = now.toLocaleTimeString('en-US', {
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true
-    });
+</body>
+<script>
 
-    // Build the final date/time string
-    var formattedString = dateString + ' ' + timeString;
 
-    // Set the textbox value to the formatted date/time string
-    document.getElementById("Date").value = formattedString;
+const message = document.getElementById('message');
+const find = document.getElementById('find');
+const replace = document.getElementById('replace');
+const changeBtn = document.getElementById('change');
+const changeCount = document.getElementById('changeCount');
+
+window.onload = showDate;
+function resetForm() {
+  document.getElementById("form").reset();
+  setTimeout(function(){ 
+    showDate();
+  },0);
+}
+
+
+//disable / enable inputs
+find.addEventListener("keyup", (e) =>{
+if(find.value != ""){
+    replace.disabled = false
+    changeBtn.disabled = false
+}
+if(find.value == ""){
+replace.disabled = true
+changeBtn.disabled = true
+}
+})
+
+//find and replace function
+changeBtn.addEventListener('click', () => {
+
+  let replacedText = message.value.replaceAll(find.value, replace.value);
+  let count = (message.value.match(new RegExp(find.value, 'g')) || []).length;
+  message.value = replacedText;
+  changeCount.textContent = count + " replacements made."
+  
+});
+
+function showDate(){
+   // Get the current date
+   var now = new Date();
+
+// Define arrays for month names and day names
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 
+              'July', 'August', 'September', 'October', 'November', 'December'];
+var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+// Format the date string
+var dateString = months[now.getMonth()] + ' ' + now.getDate() + ', ' 
+                + now.getFullYear() + ' ' + days[now.getDay()] + ' '
+                + now.toLocaleTimeString('en-US', {hour: 'numeric', 
+                                                  minute: '2-digit', 
+                                                  hour12: true});
+
+// Set the textbox value to the formatted date
+document.getElementById("Date").value = dateString;
+}
+
+
+
+
+
+
+
+
 </script>
+
+
+
   
 </html>
