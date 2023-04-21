@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* part1 */
+        .part1_table{
+            width: 100%;
+            font-family:sans-serif;
+        }
+        .part1_table thead{
+            height: 100px;
+        }
+        .part1_table tbody{
+            height: 200px;
+        }
+        .part1_table th{
+            font-size: 35px;
+            background-color:#deeaf6;
+        }
+        .part1_table td{
+            font-size: 28px;
+            padding: 40px;
+        }
+
+        /* part2 */
+        .col1{
+            width: 20%;
+            padding-left: 50px;
+        }
+        .col1 > img{
+            width:  300px;
+            height: 300px;
+        }
+        .col2{
+            width: 80%;
+            padding-left:100px;
+            font-size: 20px;
+        }
+        .Language{
+            width: 100%;
+            border-top: 2px  solid black;
+            padding-bottom: 50px;
+           
+        }
+        .link{
+            font-size:20px;
+        }
+        
+        /* part3 */
+        .p3Title{
+            margin: 0;
+            font-size: 24px;
+
+        }
+        .p3_text{
+            margin-top: 0;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        .p3_table{
+            margin-left: 50px;
+            margin-bottom: 25px;
+        }
+        
+        .p3_table td{
+            width: 200px;
+            font-size: 20px;
+        }
+        .p3_table span{
+        font-size: 22px;
+        font-weight: bold;
+        }
+
+        /* part 4 */
+        #nameError,#McodeError{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- part 1 -->
+
+    <table class="part1_table" border="1">
+        <thead>
+            <th colspan="3">CSIT128:Assignment 1</th>
+            <th>Group T1G105</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3" style="width:20%">Student Number/ Name / Email</td>
+                <td style="width:15%">8219035</td>
+                <td style="width:30%">KHANT KO KO ZAW</td>
+                <td >kkkz956@uowmail.edu.au</td>
+            </tr>
+            <tr>
+                <td >8221947</td>
+                <td>SU THET MIN HTET</td>
+                <td>stmh046@uowmail.edu.au</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- part 2 -->
+
+    <h1>Part 2: Hello World program in different languages</h1>
+    <ul>
+        <li class="link"><a href="#C++">C++</a></li>
+        <li class="link"><a href="#C#">C#</a></li>
+        <li class="link"><a href="#Python">Python</a></li>
+        <li class="link"><a href="#HTML">HTML</a></li>
+    </ul>
+
+    <table id="C++" class="Language">
+        <tr>
+            <td><h2>C++</h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="CPP-Language.png" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+#include &lt;iostream&gt;
+
+void main() {
+        count &lt;&lt; &quot;Hello World!&quot &lt;&lt; endl;
+}
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    
+
+    <table id="C#" class="Language">
+        <tr>
+            <td><h2>C#</h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="CS-Language.png" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+using System;
+
+class Program
+{
+        static void main()
+        {
+            Console.WriteLine(&quot;Hello, World!&quot;);
+        }
+}
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    <table id="Python" class="Language">
+        <tr>
+            <td><h2>Python<h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="Python-Language.jpg" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+# Hello World program in Python
+
+print(&quot;Hello World!&quot;)
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    <table id="HTML" class="Language">
+        <tr>
+            <td><h2>HTML</h2></td>
+        </tr>
+        <tr>
+            
+            <td class="col1"><img src="html-Language.png" alt=""></td>
+            <td class="col2">
+                <pre>
+                <code>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Hello World!
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+
+    <!-- part 3 -->
+
+    <h1>Part 3:University policies and services</h1>
+    <h3 class="p3Title">PLAGIARISM</h3>
+    <p class="p3_text">Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to receive zero for the entire assignment. Pagiarism has led o students being expelled from the University.<br>Please click <a target="_blank" href="https://www.uow.edu.au/student/support-services/learning-development/plagiarism/">here</a> to read more about Plagiarism</p>
+
+    <h3 class="p3Title">ACADEMIC CONSIDERATION</h3>
+
+    <p class="p3_text">We know that life isn't perfect and there may be a time when you can't hand in an assignment on time, or make it to class or an exam. If you find yourself in a situation like this, you may be eligible for Academic Consideration. Academic Consideration is designed to help students when they are sick, injured, or where a serious, unplanned situation has occured that has affectd their ability to study. <br>Please click <a target="_blank" href="https://www.uow.edu.au/student/admin/academic-consideration/portal/">here</a> to read more about Academic Consideration.</p>
+
+    <h3 class="p3Title">STUDENT SUPPORT ADVISERS</h3>
+    <p class="p3_text">If you have an issue or problem that is affecting your study, then the Student Support Advisers may be abke ti help. THere are Student Support Advisers available to assist students who are studying at all UOW Campuses and in all UOW Faculities <br>Please click <a target="_blank" href="https://www.uow.edu.au/student/support-services/advisers/">here</a> to read more about Student Support Advisers. </p>
+    <p class="p3_text" style="margin-bottom: 0px;">Student Support Adviser contact details for Faculty of Engineering and information Sciences.</p>
+    <table class="p3_table" border="1">
+        <tr>
+          <td><span>Ann-Maree Smith</span><br>Blk 40:133 , Wollongong Campus <br>(02) 4221 4714 <br>Mon-Fri <br>ams@uow.edu.au</td>
+          <td ><span>Mitz Perez</span><br>Blk 4:105 , Wollongong Campus <br>(02) 4221 3833 <br>Mon-Fri <br>mperez@uow.edu.au</td>
+         </tr>
+      </table>
+
+    <h3 class="p3Title">DISABILITY SERVICES</h3>
+    <p class="p3_text">Disability Services provide advice and support for students with a disablity or health condition. Our aim is to ensure students with a disability realise their full academic potential. We also provide support for those who are the primary carers for those with a medical condition or disability. <br>Please click <a target="_blank" href="https://www.uow.edu.au/student/support-services/disability/">here</a> to read more about Disability Services.</p>
+
+
+    <!-- part 4 -->
+
+    <form onSubmit="return checkSubmit()" id="form" action="https://translate.google.com" method="get">
+        
+        <table>
+            <tr>
+              <!--Name-->
+              <td><label for="name">Name:</label></td>
+              <td><input type="text" id="name" name="name" onblur="validateName()"/>
+              <span id="nameError"></span></td>
+            </tr>
+            <tr>
+              <!--ModuleCode-->
+              <td><label for="moduleCode">Module code:</label></td>
+              <td><input type="text" id="moduleCode" name="moduleCode" onblur="validateModuleCode()"/>
+              <span id="McodeError"></span></td>
+            </tr>
+            <tr> <!--CurrentDate-->
+                <td><label for="currentDate">Current date:</label></td>
+                <td><input type="text" id="currentDate" readonly></td>
+            </tr>
+            <tr>
+                <!--Message-->
+                <td><label for="message" rows="4" cols="10">Message:</label></td>
+                <td><textarea name="text" id="message" onblur="Message()">Hello Test 202304</textarea>
+                <span id="MessageError"></span></td>
+            </tr>
+            <tr>
+                <!--find-->
+                <td><label for="find">Find:</label></td>
+                <td><input type="text" id="find" oninput="check()"></td>
+            </tr>
+            <tr>
+                <!--replace-->
+                <td><label for="replace">Replace:</label></td>
+                <td><input type="text" id="replace" disabled></td>
+            </tr>
+            <tr>
+                <!--find and replace-->
+                <td><button type="button" onclick="Replace()">Find and Replace</button></td>
+                <td><span id="count"></span></td>
+            </tr>
+            <tr>
+                <!--Source language-->
+                <td><label for="sl">Source language:</label></td>
+                <td>
+                    <input type="radio" name="sl" value="en" checked>English
+                    <input type="radio" name="sl" value="ms">Malay
+                </td>
+                
+            </tr>
+            <tr>
+                <!--Target language-->
+                <td><label for="tl">Target language:</label></td>
+                <td><select id="tl" name="tl" title="tl">
+                    <option value="ms" selected>Malay</option>
+                    <option value="zh-CN">Chinese</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Translate"></input>
+                    <input type="button" onclick="resetForm()" value="reset">
+                </td>
+                
+            </tr>
+        </table>
+    </form>
+    
+</body>
+
+<script>
+// load the date when window is loaded
+window.onload = showDate();
+
+// retrieve date after reset 
+function resetForm() {
+  document.getElementById("form").reset();
+  setTimeout(function(){ 
+    showDate();
+    },0);
+
+}
+
+
+    function validateName() {
+        var Iname = document.getElementById("name").value;
+        var nameContent = /^[a-zA-Z0-9]+$/; //no special character
+        if (Iname == null || Iname == "") {
+            document.getElementById("nameError").innerHTML ="Name must not be empty";
+            document.getElementById("name").style.border = "2px solid red";
+            return false;
+        }
+        if (!nameContent.test(Iname)) {
+            document.getElementById("nameError").innerHTML ="You cannot contain special character";
+            document.getElementById("name").style.border = "2px solid red";
+            return false;
+        } else {
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("name").style.border = "2px solid green";
+        }
+        return true;
+    }
+
+    function validateModuleCode() {
+        var McodeInput = document.getElementById("moduleCode").value;
+        var Mcontent = /^[A-Z][a-z][2-9]{3}$/;
+        if (!Mcontent.test(McodeInput)) {
+            document.getElementById("McodeError").innerHTML ="Please Enter the valid format for the module";
+            document.getElementById("moduleCode").style.border = "2px solid red";
+            return false;
+        } else {
+            document.getElementById("McodeError").innerHTML = "";
+            document.getElementById("moduleCode").style.border = "2px solid green";
+        }
+        return true;
+    }
+
+    function showDate(){
+    // Get the current date
+    var now = new Date();
+    // Define arrays for month names and day names
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    // Format the date string
+    var dateString = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear() + ' ' + days[now.getDay()] + ' '+ now.toLocaleTimeString('en-US', {hour: 'numeric',minute: '2-digit',hour12: true});
+    // Set the textbox value to the formatted date
+    document.getElementById("currentDate").value = dateString;
+    }
+
+    function Message() {
+        var defaultText='Hello Test 202304';
+        var messageInput=document.getElementById("message");
+        if(messageInput.value==='' || messageInput.value===null) {
+            messageInput.value = defaultText;
+        }
+    }
+
+    //find check
+    function check() {
+        var findInput=document.getElementById("find");
+        var replaceInput=document.getElementById("replace");
+        if (findInput.value === "") {
+            replaceInput.disabled=true;
+        }else {
+            replaceInput.disabled=false;
+        }
+    }
+    //replacing
+    function Replace() {
+        var messageInput=document.getElementById("message");
+        var findInput=document.getElementById("find").value;
+        var replaceInput=document.getElementById("replace").value;
+
+        var newMessage=messageInput.value;
+        var count=0;
+        while(newMessage.includes(findInput)) {
+            newMessage=newMessage.replace(findInput,replaceInput);
+            count++;
+        }
+        // display the count
+        var display=document.getElementById("count");
+        display.innerHTML="Number of replacements made: " + count;
+        messageInput.value=newMessage;
+    }
+
+    function checkSubmit(){
+       var x = validateName();
+       var y = validateModuleCode();
+       if(y === false || x === false) {
+            return false;
+       }else{
+            return true;
+       }
+    }
+
+</script>
+</html>
