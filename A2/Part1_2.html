@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>A2-T2G05</title>
+    <title>A2-T1G05</title>
 </head>
 <style>
+    /* part1 */
+    .part1_table{
+            width: 100%;
+            font-family:sans-serif;
+            margin-bottom:50px;
+        }
+        .part1_table thead{
+            height: 100px;
+        }
+        .part1_table tbody{
+            height: 200px;
+        }
+        .part1_table th{
+            font-size: 35px;
+            background-color:#deeaf6;
+        }
+        .part1_table td{
+            font-size: 28px;
+            padding: 40px;
+        }
+
     /*part2*/
     .part2_table{
             width: 100%;
@@ -31,6 +52,29 @@
     
 </style>
 <body>
+        <!-- part 1 -->
+
+        <table class="part1_table" border="1">
+            <thead>
+                <th colspan="3">CSIT128:Assignment 2</th>
+                <th>Group T1G05</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3" style="width:20%">Student Number/ Name / Email</td>
+                    <td style="width:15%">8219035</td>
+                    <td style="width:30%">KHANT KO KO ZAW</td>
+                    <td >kkkz956@uowmail.edu.au</td>
+                </tr>
+                <tr>
+                    <td >8221947</td>
+                    <td>SU THET MIN HTET</td>
+                    <td>stmh046@uowmail.edu.au</td>
+                </tr>
+            </tbody>
+        </table>
+    
+       
     <!-- part 2 -->
     <table class="part2_table" border="1" >
         <thead>
@@ -126,10 +170,7 @@
         document.getElementById("score").innerHTML=score;
         selectedItem=document.getElementById("item").value;
         //reset the score and round count
-        
-        
         chooseItem=setInterval(generateItem,1000);
-
         //disabled the selectedItem and the start button
         document.getElementById('item').disabled=true;
         document.getElementById('start-button').disabled=true;
@@ -138,19 +179,15 @@
     function stop() {
         //stop generating
         clearInterval(chooseItem);
-
         //re-enable the target item  select an start button
         document.getElementById('item').disabled=false;
-        document.getElementById('start-button').disabled=false;
-        
-        
+        document.getElementById('start-button').disabled=false;  
     }
     function generateItem() {
 
         var item1=document.getElementById("item1");
         var item2=document.getElementById("item2");
         var item3=document.getElementById("item3");
-
         // Get three random characters that are not the same as each other
         var char1, char2, char3;
         do {
@@ -158,10 +195,7 @@
             char2 = characters[Math.floor(Math.random() * characters.length)];
             char3 = characters[Math.floor(Math.random() * characters.length)];
         } while (char1 === char2 || char1 === char3 || char2 === char3);
-        
 
-        
-        
          // Update the items on the screen with onclick attribute
         item1.innerHTML = "<div class='char' onclick='checkItem(\"" + char1 + "\")'>" + char1 + "</div>";
         item2.innerHTML = "<div class='char' onclick='checkItem(\"" + char2 + "\")'>" + char2 + "</div>";

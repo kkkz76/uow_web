@@ -24,7 +24,7 @@
 
         </style>
             <head>
-                <title>A2T1G05</title>
+                <title>A2-T1G05</title>
             </head>
             <body>
                 <h1> <xsl:value-of select="@queryLocation" /> [ <xsl:value-of select="@queryTime" />]</h1>
